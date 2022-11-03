@@ -64,10 +64,6 @@ function getMovieInfo(movieName){
 async function printMovieInfo(movieName) {
     try {
         let movie = await getMovieInfo(movieName);
-        // let director = await getMovieInfo(director);
-        // let runtime = await getMovieInfo(runtime);
-        // let description = await getMovieInfo(description);
-        console.log(movie)
         console.log(`${movie.title} directed by ${movie.director}. A story of ${movie.description} that runs for ${movie.runtime} mins`)
     } catch(err) {
         console.warn(err);
